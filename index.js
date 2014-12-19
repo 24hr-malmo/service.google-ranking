@@ -2,7 +2,7 @@ var check = require('./check');
 
 var zmq = require('zmq');
 var zonar = require('zonar');
-var Q = require('Q');
+var Q = require('q');
 
 // configs
 var port = 5999;
