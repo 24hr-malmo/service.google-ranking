@@ -43,11 +43,11 @@ function find(query, url) {
 
 exports.find = find;
 
-/*
-find('webbyrå malmö', 'http://www.24hr.se').then(function(result) {
-    console.log(result);
-});
-*/
+
+//find('webbyrå malmö', 'https://www.24hr.se').then(function(result) {
+//    console.log(result);
+//});
+
 
 
 

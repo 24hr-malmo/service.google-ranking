@@ -5,10 +5,10 @@ var zonar = require('zonar');
 var Q = require('q');
 
 // configs
-var port = 5999;
-var address = "tcp://0.0.0.0:" + port;
-var rPort = 5998;
-var rAddress = "tcp://0.0.0.0:" + rPort;
+var port = 5399;
+var address = "tcp://*:" + port;
+var rPort = 5398;
+var rAddress = "tcp://*:" + rPort;
 
 // setup
 var broadcaster = zonar.create({ net: '24hr', name: 'google.ranking' });
@@ -23,11 +23,11 @@ var lastData = { position: -1 };
 
 function getRanking() {
     console.log('Checking google ranking');
-    if (lastData.position != -1) {
-        return Q.resolve(lastData);
-    } else {
-        return check.find('webbyrå malmö', 'http://www.24hr.se');
-    }
+    //if (lastData.position != -1) {
+        //return Q.resolve(lastData);
+    //} else {
+        return check.find('webbyrå malmö', 'https://www.24hr.se');
+    //}
 }
 
 function periodicCheck() {
@@ -35,7 +35,7 @@ function periodicCheck() {
     getRanking().then(function(result) {
         lastData = result;
         socket.send('all' + JSON.stringify(lastData));
-        console.log('Found it on rank %s', result.position);
+        console.log('Found it on rank %s', result.position, new Date());
     })
     .then(function() {
         setTimeout(periodicCheck, 1000 * 60 * 10);
