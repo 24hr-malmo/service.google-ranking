@@ -10,11 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "es6-promise": "^2.0.1",
-    "google": "^0.6.0",
+    "google": "2.0.0",
     "jsdom": "^1.5.0",
     "q": "^1.1.2",
     "request": "^2.51.0",
-    "zmq": "^2.8.0",
-    "zonar": "^0.6.2"
+    "zmq": "^2.13.0",
+    "zonar": "0.6.4"
   }
 }

@@ -13,13 +13,19 @@ function find(query, url) {
         found: false
     };
 
+console.log(result);
+
     var promise = new Promise(function(resolve, reject) {
 
-        google(query, function(err, next, links){
+        google(query, function(err, result) {
+
+console.log(result);
 
             if (err) {
                 return reject(err);
             }
+
+            var links = result.links;
 
             for (var i = 0; i < links.length; ++i) {
 

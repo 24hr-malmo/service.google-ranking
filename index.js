@@ -26,7 +26,7 @@ function getRanking() {
     //if (lastData.position != -1) {
         //return Q.resolve(lastData);
     //} else {
-        return check.find('webbyrå malmö', 'https://www.24hr.se');
+        return check.find('digital byrå malmö', 'https://www.24hr.se');
     //}
 }
 
