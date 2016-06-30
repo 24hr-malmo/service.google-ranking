@@ -19,8 +19,6 @@ console.log(result);
 
         google(query, function(err, result) {
 
-console.log(result);
-
             if (err) {
                 return reject(err);
             }
