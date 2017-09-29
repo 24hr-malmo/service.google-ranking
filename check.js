@@ -13,15 +13,19 @@ function find(query, url) {
         found: false
     };
 
+console.log(result);
+
     var promise = new Promise(function(resolve, reject) {
 
-        google(query, function(err, next, links){
+        google(query, function(err, result) {
 
             console.log(links);
 
             if (err) {
                 return reject(err);
             }
+
+            var links = result.links;
 
             for (var i = 0; i < links.length; ++i) {
 
@@ -45,11 +49,11 @@ function find(query, url) {
 
 exports.find = find;
 
-/*
-find('webbyrå malmö', 'http://www.24hr.se').then(function(result) {
-    console.log(result);
-});
-*/
+
+//find('webbyrå malmö', 'https://www.24hr.se').then(function(result) {
+//    console.log(result);
+//});
+
 
 
 
