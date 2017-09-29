@@ -41,7 +41,7 @@ socket.bind(address, function(err) {
                 }
             })
             .then(function() {
-                setTimeout(getPosition, 1000 * 60 * 10);
+                setTimeout(getPosition, 1000 * 60 * 30);
             });
 
     }

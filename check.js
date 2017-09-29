@@ -17,6 +17,8 @@ function find(query, url) {
 
         google(query, function(err, next, links){
 
+            console.log(links);
+
             if (err) {
                 return reject(err);
             }
